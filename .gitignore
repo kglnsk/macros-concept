@@ -1,0 +1,6 @@
+.DS_Store
+.codex
+node_modules/
+
+# Source dataset. The static app uses generated compact JSON in data/.
+recipes-with-nutrition.csv

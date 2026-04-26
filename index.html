@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Macros</title>
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="control-surface" aria-labelledby="app-title">
+        <div class="masthead">
+          <div>
+            <p class="eyebrow">Anti-menu protocol</p>
+            <h1 id="app-title">Macros</h1>
+            <p class="manifesto">Four numbers enter. Cuisine exits wearing a lab coat. No notes, no vibes, no rescue course.</p>
+          </div>
+          <div class="masthead-aside">
+            <div class="status" id="status">Consulting the constraint</div>
+            <div class="stamp">SERVICE 04<br>REFUSAL TASTING</div>
+          </div>
+        </div>
+
+        <div class="stage">
+          <form class="sliders" id="macro-form">
+            <div class="slider-row" data-kind="protein">
+              <div class="slider-meta">
+                <label for="protein">Protein</label>
+                <output id="protein-value" for="protein">18.0g</output>
+              </div>
+              <div class="track-note">muscle theater</div>
+              <input id="protein" name="protein" type="range" min="0" max="50" step="0.1" value="18">
+            </div>
+
+            <div class="slider-row" data-kind="fat">
+              <div class="slider-meta">
+                <label for="fat">Fat</label>
+                <output id="fat-value" for="fat">12.0g</output>
+              </div>
+              <div class="track-note">mouthfeel tax</div>
+              <input id="fat" name="fat" type="range" min="0" max="55" step="0.1" value="12">
+            </div>
+
+            <div class="slider-row" data-kind="carbs">
+              <div class="slider-meta">
+                <label for="carbs">Carbs</label>
+                <output id="carbs-value" for="carbs">22.0g</output>
+              </div>
+              <div class="track-note">soft power starch</div>
+              <input id="carbs" name="carbs" type="range" min="0" max="95" step="0.1" value="22">
+            </div>
+
+            <div class="slider-row" data-kind="calories">
+              <div class="slider-meta">
+                <label for="calories">Calories</label>
+                <output id="calories-value" for="calories">268 kcal</output>
+              </div>
+              <div class="track-note">the lie with units</div>
+              <input id="calories" name="calories" type="range" min="0" max="700" step="1" value="268">
+            </div>
+          </form>
+
+          <aside class="match-panel" aria-live="polite">
+            <div class="match-heading">
+              <p class="eyebrow">The kitchen permits</p>
+              <div class="match-score" id="match-score">--</div>
+            </div>
+            <p class="verdict" id="verdict">Loading a compliant object</p>
+            <h2 id="match-name">Awaiting recipes</h2>
+            <div class="meta-line" id="match-meta"></div>
+            <div class="macro-grid" id="match-macros"></div>
+            <button class="primary-action" id="recipe-button" type="button" disabled>Accept dish</button>
+          </aside>
+        </div>
+      </section>
+
+      <section class="details" id="details" hidden>
+        <div class="details-main">
+          <div>
+            <p class="eyebrow">Evidence</p>
+            <h2 id="details-name"></h2>
+          </div>
+          <a class="source-link" id="details-link" href="#" target="_blank" rel="noreferrer">Provenance</a>
+        </div>
+        <div class="details-grid">
+          <article>
+            <h3>Material Facts</h3>
+            <ul id="ingredient-list"></ul>
+          </article>
+          <article>
+            <h3>Constraint Audit</h3>
+            <dl id="stats-list"></dl>
+          </article>
+          <article>
+            <h3>Dietary Alibis</h3>
+            <div class="chip-list" id="label-list"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="alternates" aria-labelledby="alternates-title">
+        <div class="section-heading">
+          <p class="eyebrow">Rejected but nearby</p>
+          <h2 id="alternates-title">Almost the assignment</h2>
+        </div>
+        <div class="recipe-list" id="recipe-list"></div>
+      </section>
+    </main>
+
+    <script src="assets/app.js" defer></script>
+  </body>
+</html>
